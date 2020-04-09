@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            vuejs
+        </title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id='exercise'>
+            <p>{{ name }} {{ age }}</p>
+            <p>{{ age * 3 }}</p>
+            <p>{{ random() }}</p>
+            <div>
+                <img v-bind:src="image" style="width:100px;height:100px">
+            </div>
+            <div>
+                <input type="text" v-bind:value="name">
+            </div>
+            </div>
+            <script>
+                new Vue({
+                    el: '#exercise',
+                    data: {
+                        name: 'himani',
+                        age: 24,
+                        image: 'https://www.google.com/search?q=image&oq=image&aqs=chrome..69i57j35i39j0l5j69i60.2770j0j7&sourceid=chrome&ie=UTF-8'
+                    },
+                    methods: {
+                        random: function()
+                        {
+                            return Math.random();
+                        }
+                    }
+                })
+            </script>
+            </body>
+            </html>
+        
